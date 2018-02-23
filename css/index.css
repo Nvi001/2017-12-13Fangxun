@@ -1,4 +1,4 @@
-*{margin: 0; padding: 0;  font-family: '΢���ź�', microsoft yahei, sans-serif;}
+*{margin: 0; padding: 0;  font-family: '微软雅黑', microsoft yahei, sans-serif;}
 ul,li{list-style: none;}
 a,a:visited,a:link,a:active,a:hover{ text-decoration: none;}
 html{height: 100%;}
@@ -132,9 +132,19 @@ body { height: inherit; position: relative; margin: 0; overflow: hidden;backgrou
 .ptList .commonItem_xtgl .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_08xtgl.png") center center no-repeat;}
 
 
-
-
-
-
+.showDengji{position: absolute; box-sizing: border-box; right: 40px; top: 34px; background:rgba(255,255,255,.3); border-radius: 27px; display: block; width: 180px; height: 54px; line-height: 50px; font-size: 18px; color: #ddd; text-align: center; overflow: hidden; z-index: 600;}
+.showDengji{ animation: changePassBT 3.5s ease 1;}
+.showDengji{ transition:all 300ms ease;}
+.showDengji:hover{ color: #fff; background: rgba(255,255,255,.8); box-shadow: 0 2px 8px #00e4ff;}
+.showDengji .dj_icon{ float: left; display: block; width:48px; height: 48px; margin: 3px 3px 3px 10px; overflow: hidden;}
+.dj4 .dj_icon{ background: url("../images/main_dengji.png") center 3px no-repeat;}
+.dj3 .dj_icon{ background: url("../images/main_dengji.png") center -97px no-repeat;}
+.dj2 .dj_icon{ background: url("../images/main_dengji.png") center -197px no-repeat;}
+.dj1 .dj_icon{ background: url("../images/main_dengji.png") center -297px no-repeat;}
+.showDengji:after{ position: absolute; display: block; left: 58px; height: 50px;margin: 2px ; line-height: 50px ;}
+.dj1:after{content: "Ⅰ级应急响应"; color: #b31a25;}
+.dj2:after{content: "Ⅱ级应急响应"; color: #ed6c00;}
+.dj3:after{content: "Ⅲ级应急响应"; color: #ffe100;}
+.dj4:after{content: "Ⅳ级应急响应"; color: #004190;}
 
 
