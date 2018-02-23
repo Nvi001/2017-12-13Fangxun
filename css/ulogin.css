@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0;  font-family: 'Î¢ÈíÑÅºÚ', microsoft yahei, sans-serif;}
+ul,li{list-style: none;}
+a,a:visited,a:link,a:active,a:hover{ text-decoration: none;}
+html{height: 100%;}
+body { height: inherit; position: relative; margin: 0; background: #000042 url("../images/bg_login.jpg") top center no-repeat; overflow: hidden;}
+
+.outbox{box-sizing: border-box; width: 100%; height: 100%; padding-top: 416px;}
+.row{ height: 50px; text-align: center; margin-bottom: 20px;}
+.row input{ box-sizing: border-box; width: 380px; height: 50px; line-height: 100%; padding-left: 50px; text-align: left; font-size: 18px;
+border: 1px solid #00deff; box-shadow: 0 3px 7px rgba(0,0,0,.35); border-radius: 3px;}
+.userIn{ background:#fff url("../images/icon_login_user.png") 11px 11px no-repeat;}
+.passwordIn{ background:#fff url("../images/icon_login_password.png") 11px 11px no-repeat;}
+.btRow{ position: relative; margin-top: 25px; height: 50px; margin-bottom: 10px;}
+.loginBt{ display: block; margin: 0 auto; box-sizing: border-box; width: 380px; height: 50px; line-height: 48px; font-size: 18px;
+background: #0071c0; border: 1px solid #00deff; box-shadow: 0 3px 7px rgba(0,0,0,.35); border-radius: 3px;}
+.loginBt{position: absolute; left: calc(50% - 190px);}
+.loginBt{transition:all 300ms ease;}
+.loginBt,
+.loginBt:link,
+.loginBt:visited{ color: #dde7f3; background: #0071c0; border: 1px solid #00deff; box-shadow: 0 3px 7px rgba(0,0,0,.35);  top: 0;}
+.loginBt:hover  { color: #ffffff; background: #00aae0; border: 1px solid #00efff; box-shadow: 0 6px 10px rgba(0,0,0,.35); top: -3px;}
+.loginBt:active { color: #9ebde0; background: #004f86; border: 1px solid #009bb2; box-shadow: 0 2px 2px rgba(0,0,0,.35);  top:  2px; }
+.forgetRow{ margin: 0 auto; width: 380px; height: 50px; text-align: right;}
+.forget{ font-size: 14px;}
+.forget,
+.forget:link,
+.forget:active,
+.forget:visited{ color: #00deff;}
+.forget:hover  { color: #ffffff;}
+
+
+
+
+
+
+

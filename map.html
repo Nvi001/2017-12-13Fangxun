@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="images/blue.css" rel="stylesheet">
+    <link href="css/map_page.css" rel="stylesheet">
+</head>
+<body>
+<div class="outBox">
+    <div class="bt_temp">
+        <a class="test" id="test" href="javascript:;">任务点</a>
+    </div><!--此div为预览底图，请删除-->
+    <div class="mapTools">
+        <div class="mtTabs">
+            <div class="mtTab mtMonitor">
+                <div class="mtBt"><i></i>实时监控<b></b></div>
+                <div class="mtBody mtSelect">
+                    <div class="mtSleItem"><i></i>
+                        <label>
+                            <input type="checkbox" name="yuliang1" checked>
+                            雨量
+                        </label>
+                    </div>
+                    <div class="mtSleItem"><i></i>
+                        <label>
+                            <input type="checkbox" name="guiji1" checked>
+                            轨迹
+                        </label>
+                    </div>
+                    <div class="mtSleItem"><i></i>
+                        <label>
+                            <input type="checkbox" name="renwu1" checked>
+                            任务
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="mtTab mtLayer">
+                <div class="mtBt"><i></i>图层显示<b></b></div>
+                <div class="mtBody mtSelect">
+                    <div class="mtSleItem"><i></i>
+                        <label>
+                            <input type="checkbox" name="yuliang2" checked>
+                            雨量
+                        </label>
+                    </div>
+                    <div class="mtSleItem"><i></i>
+                        <label>
+                            <input type="checkbox" name="guiji2" checked>
+                            轨迹
+                        </label>
+                    </div>
+                    <div class="mtSleItem"><i></i>
+                        <label>
+                            <input type="checkbox" name="renwu2" checked>
+                            任务
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="mtTab mtOperate">
+                <div class="mtBt"><i></i>工具操作<b></b></div>
+                <div class="mtBody mtPlate">
+                    <div class="mtOperatePanel">
+                        <div class="rwTabs">
+                            <div class="rwTab active">雨量</div>
+                            <div class="rwTab">轨迹</div>
+                            <div class="rwTab">更多图层</div>
+                            <div class="rwTab">分析</div>
+                        </div>
+                        <div class="rwShowBox">
+                            <div class="rwDetail active">
+                                <div class="mtOperate_inBox">
+                                    <div class="formRow timeRow">
+                                        <label for="ds_1"></label><input class="dateSelect" id="ds_1" type="text"/>
+                                        <div class="betweenDS">至</div>
+                                        <label for="ds_2"></label><input class="dateSelect" id="ds_2" type="text"/>
+                                    </div>
+                                    <div class="formRow">
+                                        <label for="quyu">区域</label>
+                                        <select id="quyu">
+                                            <option value ="0">区域</option>
+                                            <option value ="1">区域 1</option>
+                                            <option value ="2">区域 2</option>
+                                            <option value ="3">区域 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="formRow">
+                                        <label for="jibie">级别</label>
+                                        <select id="jibie">
+                                            <option value ="0">A: 10,25,50,100,150,200</option>
+                                            <option value ="1">B: 10,25,50,100,150,200</option>
+                                            <option value ="2">C: 10,25,50,100,150,200</option>
+                                            <option value ="3">D: 10,25,50,100,150,200</option>
+                                        </select>
+                                    </div>
+                                    <div class="formRow radioRow">
+                                        <div class="radioRow_label">类型</div>
+                                        <div class="radioTd">
+                                            <label for="lx_1">雨量站</label>
+                                            <input type="radio" id="lx_1" name="leixing" checked>
+                                        </div>
+                                        <div class="radioTd">
+                                            <label for="lx_2">等值线</label>
+                                            <input type="radio" id="lx_2" name="leixing">
+                                        </div>
+                                        <div class="radioTd">
+                                            <label for="lx_3">等直面</label>
+                                            <input type="radio" id="lx_3" name="leixing">
+                                        </div>
+                                    </div>
+                                    <div class="formRow">
+                                        <button class="btn btn-block btn-primary">确  定</button>
+                                    </div>
+                                    <div class="formRow searchRow">
+                                        <label for="search_1">站名</label>
+                                        <input placeholder="站名" id="search_1" type="text"/>
+                                        <a href="javascript:;" class="searchBt"></a>
+                                    </div>
+                                    <div class="rwDetail_info">
+                                        <table>
+                                            <tr class="rwGroup_head">
+                                                <th>序号</th>
+                                                <th>站点</th>
+                                                <th>雨量</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>站点 1</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>站点 2</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>站点 3</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>站点 4</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>站点 5</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>站点 6</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>站点 7</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>站点 8</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>站点 9</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>站点 10</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>站点 11</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>站点 12</td>
+                                                <td>10</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rwDetail">
+                                <div class="rwDetail_info">
+                                    <table>
+                                        <tr class="rwGroup_head">
+                                            <th>序号</th>
+                                            <th>名称</th>
+                                            <th>坐标</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>轨迹点 1</td>
+                                            <td>111，111</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>轨迹点 2</td>
+                                            <td>222，222</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>轨迹点 3</td>
+                                            <td>333，333</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="rwDetail">
+                                <!--更多图层-->
+                            </div>
+                            <div class="rwDetail">
+                                <!--分析-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fullScreen">
+            <a href="javascript:;" class="fullScreenBt"></a>
+        </div>
+    </div>
+    <div class="renWuBox">
+        <div class="closeBt"></div>
+        <div class="rwTop">
+            <div class="twTop_title">任务进程</div>
+            <div class="rwProcessBox">
+                <div class="rwProcess rwDone">
+                    <div class="node">
+                        <div class="processInfo">任务<br>创建</div>
+                    </div>
+                </div>
+                <div class="rwProcess rwDone">
+                    <div class="node">
+                        <div class="processInfo">方案<br>制定</div>
+                    </div>
+                </div>
+                <div class="rwProcess rwDone">
+                    <div class="node">
+                        <div class="processInfo">领导<br>审核</div>
+                    </div>
+                </div>
+                <div class="rwProcess">
+                    <div class="node">
+                        <div class="processInfo">任务<br>准备</div>
+                    </div>
+                </div>
+                <div class="rwProcess">
+                    <div class="node">
+                        <div class="processInfo">前往任<br>务地点</div>
+                    </div>
+                </div>
+                <div class="rwProcess">
+                    <div class="node">
+                        <div class="processInfo">任务<br>执行</div>
+                    </div>
+                </div>
+                <div class="rwProcess">
+                    <div class="node">
+                        <div class="processInfo">任务<br>完成</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rwContent">
+            <div class="rwTabs">
+                <div class="rwTab active">任务信息</div>
+                <div class="rwTab">任务成员</div>
+                <div class="rwTab">设备物资</div>
+            </div>
+            <div class="rwShowBox">
+                <div class="rwDetail active">
+                    <div class="rwDetail_title">人员指派防汛任务</div>
+                    <ul>
+                        <li>
+                            <span class="label">负责人：</span>
+                            <div class="info-rcol">张三峰</div>
+                        </li>
+                        <li>
+                            <span class="label">有无装载机械：</span>
+                            <div class="info-rcol">有</div>
+                        </li>
+                        <li>
+                            <span class="label">有无起吊设备：</span>
+                            <div class="info-rcol">无</div>
+                        </li>
+                        <li>
+                            <span class="label">配备工作人员：</span>
+                            <div class="info-rcol">无</div>
+                        </li>
+                    </ul>
+                    <div class="rwDetail_explain">
+                        <div class="rwDetail_explain_title">任务内容：</div>
+                        <div class="rwDetail_explain_info">
+                            <p>为了防止和减轻洪水灾害，在洪水预报、防洪调度、防洪工程运用等方面进行的有关工作。防汛的主要内容包括：长期。中期。短期天气形势预报，洪水水情预报，堤防、水库、水闸、蓄滞洪区等防洪工程的调度和运用，出现险情灾情后的抢险救灾，非常情况下的应急措施等。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rwDetail">
+                    <div class="rwDetail_title">任务成员</div>
+                    <div class="rwDetail_info">
+                        <table>
+                            <tr class="rwGroup_head">
+                                <th>序号</th>
+                                <th>姓名</th>
+                                <th>电话</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>张三</td>
+                                <td>13962300001</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>李四</td>
+                                <td>13962300002</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>赵五</td>
+                                <td>13962300003</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="rwDetail">
+                    <div class="rwDetail_title">设备物资</div>
+                    <div class="rwDetail_info">
+                        <table>
+                            <tr class="rwGroup_head">
+                                <th>序号</th>
+                                <th>名称</th>
+                                <th>备注</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>XX物资</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src='js/jquery-2.1.1.min.js'></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/screenfull.min.js"></script>
+<script src="js/icheck.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="UTF-8"></script>
+<script src='js/map_page.js'></script>
+
+<script>
+//    测试任务点
+    $(document).ready(function(){
+        $("#test").click(function(){
+            $(".renWuBox").fadeIn();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+*{margin: 0; padding: 0;  font-family: 'Î¢ÈíÑÅºÚ', microsoft yahei, sans-serif;}
+ul,li{list-style: none;}
+a,a:visited,a:link,a:active,a:hover{ text-decoration: none;}
+html{height: 100%;}
+body { height: inherit; position: relative; margin: 0; overflow: hidden;background: #0070c0;}
+.outBox{ width: 100%; height: 100%;}
+.outBox:after{ position: absolute; display: block; content: ""; width: 100%; height: 100%; background: url("../images/bg_main1.png") center bottom no-repeat; z-index: 1;}
+.outBox:before{ position: absolute; display: block; content: ""; width: 100%; height: 100%; background: url("../images/bg_mainTop.png") top center no-repeat; z-index: 2;}
+.outBox:after{animation: bg_1 2s ease 1;}
+.outBox:before{animation: bg_2 5s ease 1;}
+
+
+.mainLogo{ position: absolute; left: calc(50% - 203px); top: 30px; width:406px; height: 185px; background: url("../images/logo.png") center center no-repeat; z-index: 500; }
+.mainLogo{animation: logoA 3s ease 1;}
+.colorLine{ position: absolute; left: 0 ; top:0; width: 100%; height: 100%; z-index: 500}
+/*.cLine01{ position: absolute; background: #bf3641; }*/
+/*.cLine02{ position: absolute; background: #e67f11; }*/
+/*.cLine03{ position: absolute; background: #f3d924; }*/
+.cLine01{ position: absolute; left: 0; top:  237px; width: 100%; height: 2px; background: #bf3641; animation: cL1 2s ease 1;}
+.cLine02{ position: absolute; left: 0; top: 239px;  width: 100%; height: 4px; background: #e67f11; animation: cL2 2s ease 1;}
+.cLine03{ position: absolute; left: 0; top: 243px;  width: 100%; height: 6px; background: #f3d924; animation: cL3 2s ease 1;}
+
+@keyframes cL1
+{
+    0%   {width:0;    height: 150px; top:200px; left: 0;}
+    70%  {width:100%; height: 150px; top:200px; left: 0;}
+    100% {width:100%; height: 2px;   top:237px; left: 0;}
+}
+@keyframes cL2
+{
+    0%   {width:0;    height: 150px; top:350px; left: 0;}
+    15%   {width:0;    height: 150px; top:350px; left: 0;}
+    70%  {width:100%; height: 150px; top:350px; left: 0;}
+    100% {width:100%; height: 4px;   top: 239px;left: 0;}
+}
+@keyframes cL3
+{
+    0%   {width:0;    height: 150px; top:500px; left: 0;}
+    30%   {width:0;    height: 150px; top:500px; left: 0;}
+    70%  {width:100%; height: 150px; top:500px; left: 0;}
+    100% {width:100%; height: 6px;   top: 243px;left: 0;}
+}
+@keyframes bg_1
+{
+    0%   {opacity: 0; transform: scale(1.3);}
+    30%  {opacity: 0; transform: scale(1.3);}
+    100% {opacity: 1; transform: scale(1);}
+}
+@keyframes bg_2
+{
+    0%   {opacity: 0;}
+    50%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes logoA
+{
+    0%   {opacity: 0;transform: scale(5); top:calc(50% - 92px);}
+    50%  {opacity: 0;transform: scale(5); top:calc(50% - 92px);}
+    80%  {opacity: 1;transform: scale(1); top:30px;}
+    100% {opacity: 1;transform: scale(1); top:30px;}
+}
+
+.changePassBT{ position: absolute; box-sizing: border-box; right: 40px; bottom: 34px; background: #0050ab; border-radius: 20px; display: block; width: 136px; height: 40px; line-height: 40px; font-size: 16px; color: #ddd; text-align: center; z-index: 600;}
+.changePassBT{ animation: changePassBT 3.5s ease 1;}
+.changePassBT:hover{ color: #fff; background: #00a0e9;}
+.changePassBT i{ float: left; display: block; width:36px; height: 36px; margin: 2px; background: url("../images/iocn_main_password.png") center center no-repeat;}
+@keyframes changePassBT
+{
+    0%   {opacity: 0; right:-136px;}
+    50%  {opacity: 0; right:-136px;}
+    100% {opacity: 1; right:40px;}
+}
+
+.mainBox{position: absolute; top:270px; left: 0; width: 100%; margin: 0 auto; z-index: 800;}
+.mainBox{ animation: mainA 3.5s ease 1;}
+@keyframes mainA
+{
+    0%   {opacity: 0; top:400px;}
+    50%  {opacity: 0; top:400px;}
+    100% {opacity: 1; top:270px;}
+}
+
+
+.commonList{ position: relative; display: flex; justify-content:center; padding: 10px 0; width: 100%; background:rgba(255,255,255,.1) url("../images/line01.png") center center no-repeat;}
+.commonItem{ display: flex; align-items:center; width: 270px; height: 110px; margin: 0 10px; z-index: 100; border: 1px solid transparent; box-sizing: border-box;}
+.commonItem{transition:all 300ms ease;}
+.commonItem:hover{ box-shadow: 0 7px 5px rgba(0,0,0,.35);}
+.commonItem:nth-child(1){ background: #ac0000; border: 1px solid transparent;}
+.commonItem:nth-child(2){ background: #0055ac; border: 1px solid transparent;}
+.commonItem:nth-child(3){ background: #4f9a57; border: 1px solid transparent;}
+.commonItem:nth-child(4){ background: #e2bf00; border: 1px solid transparent;}
+.commonItem:nth-child(1):hover{ border: 1px solid #ff0000;}
+.commonItem:nth-child(2):hover{ border: 1px solid #00aaff;}
+.commonItem:nth-child(3):hover{ border: 1px solid #9effae;}
+.commonItem:nth-child(4):hover{ border: 1px solid #ffff00;}
+.itemIcon { width:100px; height: 100px; border-radius: 100%; margin-left: 10px; overflow: hidden;}
+.itemTitle{ margin-left: 30px; font-size: 24px; color:rgba(255,255,255,.8);}
+.itemTitle{ transition:all 300ms ease;}
+.itemTitle a{ display: block; font-size: 14px;  margin-right: 10px; text-decoration: none; }
+.itemTitle a:active,
+.itemTitle a:visited,
+.itemTitle a:link{color:rgba(255,255,255,.6);}
+.itemTitle a:hover{color:rgba(255,255,255,1);}
+
+.commonItem:nth-child(1) .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_a01.png") center center no-repeat;}
+.commonItem:nth-child(2) .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_a02.png") center center no-repeat;}
+.commonItem:nth-child(3) .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_a03.png") center center no-repeat;}
+.commonItem:nth-child(4) .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_a04.png") center center no-repeat;}
+
+.ptList{ width: 1200px; margin: 30px auto; display: flex; justify-content: center; flex-wrap:wrap;}
+.ptList .commonItem{ position: relative; flex:0 0 270px; margin-bottom: 20px; box-sizing: border-box; background: #00a0e9; border: 1px solid transparent; z-index: 100;}
+.ptList .commonItem:hover{z-index: 300; border: 1px solid #00e4ff; box-shadow: 0 7px 5px rgba(0,0,0,.35); cursor: pointer;}
+.commonItem:hover .itemTitle{ color:rgba(255,255,255,1); text-shadow: 0 5px 5px rgba(0,0,0,.5);}
+.sndList { position: absolute; width: calc(100% + 2px); height: auto; top:109px; left: -1px; box-shadow: 0 7px 5px rgba(0,0,0,.35); background: #0071c0;  z-index: -1; }
+.sndList { transition:all 300ms ease; height: 0; top:90px; opacity: 0; overflow: hidden;}
+.ptList .commonItem:hover .sndList{height: auto; top:109px; opacity: 1; overflow: visible;}
+.sndList a{ position: relative; display: block; width: 100%; height: 40px; font-size: 14px; box-sizing: border-box; line-height: 40px; padding-left:55px; border-bottom: 1px solid #1a7fc6;}
+.sndList a{  transition:all 300ms ease;}
+.sndList a,
+.sndList a:link,
+.sndList a:active,
+.sndList a:visited{ color:#b7e8ff; }
+.sndList a:hover{color:#fff; transform: scale(1.1); background: rgba(0,160,233,.8); z-index: 250;}
+.sndList a:after{ position: absolute; display: block; content: ""; left:38px; top: calc(50% - 4px); width: 8px; height: 8px; border-radius: 50%; background: #b7e8ff; }
+.ptList .commonItem_dygl .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_01dygl.png") center center no-repeat;}
+.ptList .commonItem_ckgl .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_02ckgl.png") center center no-repeat;}
+.ptList .commonItem_ckzy .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_03ckzy.png") center center no-repeat;}
+.ptList .commonItem_rwgl .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_04rwgl.png") center center no-repeat;}
+.ptList .commonItem_sbgl .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_05sbgl.png") center center no-repeat;}
+.ptList .commonItem_wzgl .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_06wzgl.png") center center no-repeat;}
+.ptList .commonItem_ckjk .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_07ckjk.png") center center no-repeat;}
+.ptList .commonItem_xtgl .itemIcon{background: rgba(255,255,255,.2) url("../images/icon_m_08xtgl.png") center center no-repeat;}
+
+
+
+
+
+
+
+
