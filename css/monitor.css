@@ -270,3 +270,35 @@ ul,li{list-style: none;}
 
 .tableArea .table tr{ border-bottom: 1px solid #e5ebed;}
 .tableArea .table th,.tableArea .table td{ border-right: 1px solid #e5ebed; padding: 15px 8px; text-align: center; }
+
+
+
+.rwDetail_title{ line-height: 43px; border-bottom: 1px solid #e0e0e0; margin:0 15px; font-weight: bold;}
+.rwDetail_info{padding:15px;}
+.rwDetail_info_sbwzUl{ margin: 0; display: flex; flex-wrap:wrap;}
+.rwDetail_info_sbwzUl li{ display: flex; width:calc(33.333% - 12px); height: 90px; margin-bottom: 10px; margin-right: 18px; border: 1px solid #e0e0e0; border-radius: 5px; align-items:center;}
+.rwDetail_info_sbwzUl li{transition:all 300ms ease;}
+.rwDetail_info_sbwzUl li:hover{border: 1px solid #00ccff; box-shadow: 0 2px 5px rgba(0,0,0,.2);}
+.rwDetail_info_sbwzUl li:nth-child(3n){margin-right: 0; }
+.rwDetail_info_sbwzUl li:last-child{margin-bottom: 0;}
+.rwDetail_info_sbwz_thumb{ width: 80px; height: 80px; margin: 4px; overflow: hidden; text-align:center; border-radius: 5px; }
+.rwDetail_info_sbwz_detail{flex: 1; text-align: right; padding-right: 15px;}
+.rwDetail_info_sbwz_name{ font-size: 14px; line-height: 26px;}
+.rwDetail_info_sbwz_num  { font-size: 12px; color: #999; line-height: 16px;}
+.rwDetail_info_sbwz_count{ font-size: 12px; color: #999; line-height: 16px;}
+
+
+
+.goods_done{ position: absolute; width: 120px; height: 40px; left:calc(50% - 60px); top:calc(50px - 20px);}
+.goods_done_icon{position: absolute; left: 50px; top:20px; z-index: 90; width: 0; height: 0; background: #69e334 url("../images/icon_done.png") center center no-repeat; border-radius: 50%;}
+.goods_done_txt{ width: 94px; height: 26px; line-height: 26px; text-align: center; font-weight: bold; position: absolute; z-index: 10; top:7px; right: 30px;  background: rgba(255,255,255,.8); border-radius: 10px; color: #2c9200; opacity: 0; font-size: 14px;}
+.goods_done_active .goods_done_icon{ left: 0; top:0; width: 40px; height: 40px;}
+.goods_done_active .goods_done_txt{ right: 0;  background: rgba(255,255,255,.8);  opacity: 1;}
+.goods_done_icon, .goods_done_txt{transition:all 300ms ease;}
+
+
+
+
+
+
+

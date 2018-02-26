@@ -35,12 +35,15 @@
             goodsAdd.removeClass('animated zoomIn');
         }, 1000);
         setTimeout(function () {
-            goodsAdd.addClass('animated zoomOut');
+            goodsAdd.find('.goods_done').addClass('goods_done_active');
         }, 2000);
+        setTimeout(function () {
+            goodsAdd.addClass('animated zoomOut');
+        }, 3000);
         setTimeout(function () {
             goodsAdd.removeClass('animated zoomOut').css("display", "none");
             goodsAdd.remove();
-        }, 3000);
+        }, 4000);
         goodsNumber++;
     };
     var goodsOut = function (startWH,goodsSerial) {
@@ -59,13 +62,16 @@
             goodsAdd.css("top", startTop-80);
         }, 1000);
         setTimeout(function () {
+            goodsAdd.find('.goods_done').addClass('goods_done_active');
+        }, 1500);
+        setTimeout(function () {
             goodsAdd.removeClass('animated zoomIn');
             goodsAdd.addClass('animated zoomOut');
-        }, 1500);
+        }, 2500);
         setTimeout(function () {
             goodsAdd.removeClass('animated zoomOut').css("display", "none");
             goodsAdd.remove();
-        }, 2000);
+        }, 3000);
         goodsNumber++;
     };
     var goodsIn = function (startWH,goodsSerial) {
@@ -84,12 +90,15 @@
             goodsAdd.css("top", startTop);
         }, 1000);
         setTimeout(function () {
+            goodsAdd.find('.goods_done').addClass('goods_done_active');
+        }, 1500);
+        setTimeout(function () {
             goodsAdd.removeClass('animated zoomIn');
             goodsAdd.addClass('animated zoomOut');
-        }, 1500);
+        }, 2500);
         setTimeout(function () {
             goodsAdd.removeClass('animated zoomOut').css("display", "none");
             goodsAdd.remove();
-        }, 2000);
+        }, 3000);
         goodsNumber++;
     };
