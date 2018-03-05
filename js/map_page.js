@@ -44,6 +44,9 @@ $(document).ready(function(){
             mtBody.fadeOut();
             mtOperate.removeClass("active");
         }else{
+            console.log($('.mtOperate.active'));
+            $('.mtOperate.active').find(".mtBody").fadeOut();
+            $('.mtOperate.active').removeClass("active");
             mtOperate.addClass("active");
             mtBody.fadeIn();
             $(document).click(function(e){
